@@ -1,3 +1,6 @@
+// Copyright 2026 Raban Heller
+// SPDX-License-Identifier: Apache-2.0
+
 import Foundation
 
 // CSV loader. Accepts comma- OR semicolon-separated (the two real-world

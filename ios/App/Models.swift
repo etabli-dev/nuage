@@ -1,3 +1,6 @@
+// Copyright 2026 Raban Heller
+// SPDX-License-Identifier: Apache-2.0
+
 import Foundation
 
 // Shared data models for the link-checker. Pure value types — easy to thread

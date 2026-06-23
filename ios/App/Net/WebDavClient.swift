@@ -1,3 +1,6 @@
+// Copyright 2026 Raban Heller
+// SPDX-License-Identifier: Apache-2.0
+
 import Foundation
 
 // Minimal Nextcloud WebDAV client. URLSession only — no third-party deps,
