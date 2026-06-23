@@ -1,0 +1,20 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="1024" fill="#28A745"/>
+  <g id="glyph" fill="none" stroke="#FFFFFF" stroke-width="36"
+     stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cloud outline -->
+    <path d="M 360 540
+             C 312 540, 280 506, 280 462
+             C 280 416, 320 380, 366 384
+             C 380 332, 432 296, 488 304
+             C 540 312, 580 354, 588 408
+             C 626 400, 668 422, 684 460
+             C 700 498, 680 540, 640 548
+             L 380 548
+             C 372 548, 366 545, 360 540 Z"/>
+    <!-- Up arrow -->
+    <path d="M 432 660 L 432 740 M 432 660 L 408 684 M 432 660 L 456 684"/>
+    <!-- Down arrow -->
+    <path d="M 580 740 L 580 660 M 580 740 L 556 716 M 580 740 L 604 716"/>
+  </g>
+</svg>
