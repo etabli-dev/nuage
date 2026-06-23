@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Expose probe_logs/ via FileProvider so the system share sheet can read it. -->
+    <files-path name="probe_logs" path="probe_logs/" />
+</paths>
