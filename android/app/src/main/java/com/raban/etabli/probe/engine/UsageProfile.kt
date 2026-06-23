@@ -154,7 +154,7 @@ object UsageProfileParser {
         val totalDays = days.size
         val profile = DoubleArray(1440)
         if (totalDays > 0) {
-            for ((_, mins) in perDay) for (m in mins) if (m in 0..1439) profile[m] += 1
+            for ((_, mins) in perDay) for (m in mins) if (m in 0..1439) profile[m] += 1.0
             for (i in 0 until 1440) profile[i] /= totalDays.toDouble()
         }
         return UsageProfile(
