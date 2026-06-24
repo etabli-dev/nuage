@@ -1,0 +1,44 @@
+---
+title: "Erste Schritte"
+sidebar: de
+---
+
+## Voraussetzungen
+
+- Eine eigene, erreichbare Nextcloud-Instanz (HTTPS empfohlen).
+- Ein **App-Passwort** für deinen Benutzer (siehe unten).
+
+## App-Passwort in Nextcloud erzeugen
+
+App-Passwörter ersetzen das Hauptpasswort und können pro Gerät widerrufen werden.
+
+1. In Nextcloud einloggen.
+2. Avatar oben rechts → **Persönliche Einstellungen** → **Sicherheit**.
+3. Unter **Geräte & Sitzungen**: Name vergeben (z.B. „Etabli Nuage — iPhone"), **Neues App-Passwort erstellen** klicken.
+4. URL (`https://cloud.example.org`) und das angezeigte App-Passwort merken — letzteres wird nur einmal angezeigt.
+
+## App einrichten
+
+1. App aus dem Store installieren und öffnen.
+2. Im Einrichtungs-Dialog eintragen:
+   - **Server-URL**
+   - **Benutzername**
+   - **App-Passwort**
+3. Die Anmeldung gilt für alle vier Module — ein Konto, eine Konfiguration.
+
+![Nach erfolgreicher Anmeldung: Übersicht der Module.](../_screens/android-main.png){width=320}
+
+## Modul-Status
+
+| Modul | Stand |
+|-------|-------|
+| **Dateien (WebDAV)** | round-trip-fähig: Browse, Download, Upload, Umbenennen, Löschen. |
+| **Link-Prüfer** | round-trip-fähig: CSV mit URLs prüfen, Status-Log zurück in Nextcloud schreiben. |
+| **Kontakte (CardDAV)** | in Entwicklung — noch nicht für den produktiven Einsatz. |
+| **Kalender (CalDAV)** | in Entwicklung — noch nicht für den produktiven Einsatz. |
+
+## Hinweise
+
+- App-Passwörter lassen sich in Nextcloud jederzeit unter **Sicherheit → Geräte & Sitzungen** widerrufen — bei Geräteverlust unbedingt nutzen.
+- Self-signed Zertifikate werden nicht automatisch akzeptiert.
+- Die App kontaktiert ausschließlich die konfigurierte Nextcloud-URL.

@@ -1,0 +1,44 @@
+---
+title: "Getting Started"
+sidebar: en
+---
+
+## Requirements
+
+- A self-hosted, reachable Nextcloud instance (HTTPS recommended).
+- An **app password** for your user (see below).
+
+## Create an app password in Nextcloud
+
+App passwords replace the main password and can be revoked per device.
+
+1. Sign in to Nextcloud.
+2. Avatar in the top right → **Personal Settings** → **Security**.
+3. Under **Devices & sessions**: enter a name (e.g. "Etabli Nuage — iPhone") and click **Create new app password**.
+4. Note the URL (`https://cloud.example.org`) and the displayed app password — the latter is shown only once.
+
+## Configure the app
+
+1. Install the app from the store and open it.
+2. In the setup dialog, enter:
+   - **Server URL**
+   - **Username**
+   - **App password**
+3. The sign-in covers all four modules — one account, one configuration.
+
+![After a successful sign-in: module overview.](../_screens/android-main.png){width=320}
+
+## Module status
+
+| Module | State |
+|--------|-------|
+| **Files (WebDAV)** | round-trip ready: browse, download, upload, rename, delete. |
+| **Link Checker** | round-trip ready: check a CSV of URLs, write the status log back to Nextcloud. |
+| **Contacts (CardDAV)** | in development — not yet for production use. |
+| **Calendar (CalDAV)** | in development — not yet for production use. |
+
+## Notes
+
+- App passwords can be revoked at any time in Nextcloud under **Security → Devices & sessions** — essential if a device is lost.
+- Self-signed certificates are not accepted automatically.
+- The app only contacts the configured Nextcloud URL.

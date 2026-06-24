@@ -1,0 +1,46 @@
+---
+title: "Etabli Nuage"
+sidebar: de
+---
+
+<img src="../_icons/icon-nuage.svg" alt="" width="80" align="right" style="margin:0 0 1rem 1rem;">
+
+<span class="etabli-badge">Self-hosted-Client</span>
+
+> Dein eigenes Nextcloud — Dateien, Kontakte, Kalender, Link-Prüfer — in einer App.
+
+**Status: in Entwicklung.** Die App bündelt vier Nextcloud-Module unter einem Konto. Dateien (WebDAV) und der Link-Prüfer laufen bereits round-trip-fähig; Kontakte (CardDAV) und Kalender (CalDAV) sind in Arbeit. Etabli Nuage spricht ausschließlich mit der konfigurierten Nextcloud-Instanz und ist nicht mit der Nextcloud GmbH affiliiert.
+
+![Nuage — Hauptansicht auf Android nach der Anmeldung.](../_screens/android-main.png){width=320}
+
+## Wer profitiert davon
+
+Wer Nextcloud selbst hostet und unterwegs auf Dateien, Adressen und Termine zugreifen möchte, ohne die offiziellen Apps zu mischen — und für den der Link-Prüfer (zur Pflege einer URL-Liste mit Statussynchronisation zurück in die Nextcloud) ein Plus ist.
+
+## Plattformen
+
+| Plattform | Status |
+|-----------|--------|
+| iOS       | ✓      |
+| Android   | ✓      |
+
+## Datenschutz
+
+Keine Analyse-Tools, keine Drittanbieter-SDKs. Anmeldung erfolgt am eigenen self-hosted Nextcloud-Server. Anmeldedaten (Server-URL + App-Passwort) liegen ausschließlich im Plattform-Schlüsselspeicher (iOS Keychain · Android EncryptedSharedPreferences) und gehen ausschließlich an die konfigurierte Instanz.
+
+## Installation
+
+| Plattform | Bezug |
+|-----------|-------|
+| iOS       | App Store |
+| Android   | Google Play und F-Droid (Haupt-Repository) |
+
+Details siehe [Erste Schritte](getting-started.qmd).
+
+## Hervorgegangen aus
+
+Nuage ist die Weiterentwicklung von **EtabliProbe** (ursprünglich ein reiner WebDAV-basierter Link-Prüfer). Der Link-Prüfer ist heute eines von vier Modulen.
+
+## Unterstützen
+
+Wenn dir die App nützt: [Liberapay](https://liberapay.com/rabanheller/) · in der App selbst findest du außerdem einen Buy-Me-a-Coffee-Link.

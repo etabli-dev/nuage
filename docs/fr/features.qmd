@@ -1,0 +1,68 @@
+---
+title: "Fonctionnalités"
+sidebar: fr
+---
+
+Etabli Nuage regroupe quatre modules sous un compte Nextcloud unique. Chaque module reste dans son onglet ; la connexion vaut pour tous.
+
+![Nuage — vue principale avec les quatre onglets de modules.](../_screens/android-main.png){width=320}
+
+## Vue d'ensemble des modules
+
+| Module | Statut | Objet |
+|--------|--------|-------|
+| **Fichiers** | aller-retour OK | navigateur WebDAV pour vos fichiers Nextcloud. |
+| **Vérificateur de liens** | aller-retour OK | vérifier une CSV d'URL et écrire les résultats dans Nextcloud. |
+| **Contacts** | *en développement* | CardDAV — amené à maturité. |
+| **Calendrier** | *en développement* | CalDAV — amené à maturité. |
+
+## Fichiers (WebDAV)
+
+| Action | Disponible |
+|--------|------------|
+| Parcourir les dossiers | ✓ |
+| Téléchargement (cache + partage) | ✓ |
+| Envoi (depuis Fichiers / photothèque) | ✓ |
+| Renommer, déplacer, supprimer | ✓ |
+| Détection de conflits à l'envoi | ✓ |
+
+Endpoint : `https://<serveur>/remote.php/dav/files/<utilisateur>/`.
+
+## Vérificateur de liens
+
+Repris d'EtabliProbe et réorienté vers le backend Nextcloud.
+
+![Vérificateur de liens — prédécesseur EtabliProbe : liste des sources.](../_screens/ios-probe-source.png){width=320}
+
+![Vérificateur de liens — prédécesseur EtabliProbe : exécution planifiée.](../_screens/ios-probe-launch.png){width=320}
+
+| Étape | Ce qui se passe |
+|-------|-----------------|
+| Charger la CSV d'entrée | depuis l'appli Fichiers ou le serveur Nextcloud. |
+| Sonder les URL | HEAD/GET par URL : statut HTTP, URL finale après redirections, temps de réponse. |
+| Résultat | Tabulaire dans l'appli, filtrable par statut (2xx/3xx/4xx/5xx). |
+| Sync log | Log des résultats en CSV vers un dossier Nextcloud configurable. |
+
+## Contacts (CardDAV) — *en développement*
+
+Prévu : lecture et écriture des carnets d'adresses sous `/remote.php/dav/addressbooks/users/<utilisateur>/` (vCard 3 / 4), liste + détail, recherche. Tant que l'aller-retour n'est pas systématiquement sûr, le module reste explicitement marqué « en développement ».
+
+## Calendrier (CalDAV) — *en développement*
+
+Prévu : lecture et écriture des calendriers sous `/remote.php/dav/calendars/<utilisateur>/` (iCalendar VEVENT), vues mois et liste. Les événements récurrents (RRULE) sont la partie la plus complexe et la raison pour laquelle le module n'est pas déclaré prêt prématurément.
+
+## Auth & réseau
+
+| Aspect | Comportement |
+|--------|--------------|
+| Auth | HTTP Basic avec mot de passe d'application (standard Nextcloud). |
+| Endpoint | uniquement l'URL Nextcloud configurée. |
+| Autres hôtes | non contactés ; seul le Vérificateur de liens atteint des URL fournies par l'utilisateur. |
+
+## Distribution
+
+| Canal | App |
+|-------|-----|
+| App Store (iOS) · Google Play (Android) | Etabli Nuage |
+| F-Droid — dépôt principal | Etabli Nuage |
+| Code source | [`etabli-dev/etabli-nuage`](https://github.com/etabli-dev/etabli-nuage) |
