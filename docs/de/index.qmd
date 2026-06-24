@@ -47,4 +47,4 @@ Nuage ist die Weiterentwicklung von **EtabliProbe** (ursprünglich ein reiner We
 
 ## Unterstützen
 
-Wenn dir die App nützt: [Liberapay](https://liberapay.com/rabanheller/) · in der App selbst findest du außerdem einen Buy-Me-a-Coffee-Link.
+Wenn dir die App nützt: [Liberapay](https://liberapay.com/rabanheller/).
